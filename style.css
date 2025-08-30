@@ -16,17 +16,30 @@ body {
     background: #000000;
 }
 
-#screen {
-    margin-bottom: 10px;
-    font-size: 20px;
+#calculation{
+    font-size: 18px;
     padding: 5px;
     border: none;
     width: 96%;
-    box-shadow: 1px 1px 5px #292929;
-    height: 50px;
+    outline: none;
+    height: 35px;
     text-align: right;
-    background: #000000;
-    border-radius: 3px;
+    background: #3a3a3a;
+    border-radius: 3px 3px 0px 0px;
+    color: #ffffff;
+}
+
+#result {
+    margin-bottom: 12px;
+    font-size: 20px;
+    padding: 5px;
+    border: none;
+    outline: none;
+    width: 96%;
+    height: 40px;
+    text-align: right;
+    background: #3a3a3a;
+    border-radius: 0px 0px 3px 3px;
     color: #ffffff;
 }
 
@@ -39,8 +52,9 @@ body {
 button {
     border-radius: 5px;
     background: #5f5f5f;
-    color: rgb(0, 0, 0);
+    /* color: rgb(0, 0, 0); */
     cursor: pointer;
+    color: #fff;
     height: 50px;
     border: 2px solid #000000;
     font-size: 18px;
@@ -49,18 +63,54 @@ button {
 
 .Ans {
     background: #ffbb01;
+}
 
+.opt-color{
+    background-color: #f8cf19;
+}
+
+.opt-color-u{
+    background-color: #f1cb1d;
+}
+
+.opt-color-u:hover{
+    background-color: #fad222;
+}
+
+.opt-color:hover{
+    background-color: #f8cf19;
 }
 
 .Ans:hover {
-    background-color: #0e008a;
+    background-color:  #fbff00;
+    color: #000;
 }
 
 .nothing {
-    background: #000000;
+    background: #242525;
     color: #ffffff;
 }
 
 .nothing:hover {
     background: #1a1a1a;
+}
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.footer {
+    margin-top: 18px;
+    color: #444;
+    font-size: 14px;
+    text-align: center;
+}
+
+.footer span {
+    font-weight: bold;
+    color: #000;
+    font-size: large;
 }
