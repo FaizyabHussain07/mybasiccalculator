@@ -5,6 +5,7 @@ var answer = document.getElementById("result");
 
 function clickbtn(value){
     if(answer.value === "Error"){
+        calculate.value = "";
         answer.value = "";
     }
     calculate.value += value;
@@ -18,7 +19,7 @@ function empty(){
 
 function delete1val(){
     if( answer.value === "Error"){
-        calculate.value = calculate.value.slice(0,-1);
+        calculate.value = "";
         answer.value = "";
     } else {
         calculate.value = calculate.value.slice(0,-1);
