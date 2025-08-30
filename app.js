@@ -4,8 +4,7 @@ var calculate = document.getElementById("calculation");
 var answer = document.getElementById("result");
 
 function clickbtn(value){
-    if(calculate.value === "Error" || answer.value === "Error"){
-        calculate.value = "";
+    if(answer.value === "Error"){
         answer.value = "";
     }
     calculate.value += value;
@@ -18,8 +17,8 @@ function empty(){
 }
 
 function delete1val(){
-    if(calculate.value === "Error" || answer.value === "Error"){
-        calculate.value = "";
+    if( answer.value === "Error"){
+        calculate.value = calculate.value.slice(0,-1);
         answer.value = "";
     } else {
         calculate.value = calculate.value.slice(0,-1);
@@ -44,14 +43,12 @@ function ans(){
     }
 
     if(error){
-        calculate.value = "Error";
         answer.value = "Error";
         return;
     }
 
     let result = eval(exp);
     if(isNaN(result)){
-        calculate.value = "Error";
         answer.value = "Error";
     } else {
         answer.value = result;
