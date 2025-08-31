@@ -8,8 +8,14 @@ function clickbtn(value){
         calculate.value = "";
         answer.value = "";
     }
-    calculate.value += value;
-    answer.value = "";
+    var result = calculate.value.slice(calculate.value.length - 1);
+    var operators = ["+", "-", "/", "*", "%"];
+    if (operators.indexOf(result) !== -1 && operators.indexOf(value) !== -1) {  // <===== it check the last value of the calculate if the last value of the calculate is any operator it change with new input operator from the user
+        calculate.value = calculate.value.slice(0, -1) + value;
+    } else {
+        calculate.value += value;
+        answer.value = "";
+    }
 }
 
 function empty(){
